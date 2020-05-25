@@ -15,9 +15,8 @@ function requestHandler(request,sender,sendResponse){
     let currentDoc = document.body;
     currentDoc.append(injectedFrame.outerDiv);
     injectedFrame.setFrameContent();
-    injectedFrame.getPlayerStatFromAPI(injectedFrame);
-
-
+    //injectedFrame.getPlayerStatFromAPI(injectedFrame);
+    injectedFrame.renderIFrame(injectedFrame);
 }
 
  chrome.runtime.onMessage.addListener(requestHandler);

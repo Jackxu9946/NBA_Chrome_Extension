@@ -12,14 +12,21 @@ class StatFrame {
         this.outerDiv.style.zIndex = 9999;
         this.playerName = playerName;
         this.frame = document.createElement("iframe");
+        this.frame.style.maxHeight = "600px";
+        this.frame.style.maxWidth = "800px";
+        this.frame.style.marginTop = "200px";
+        this.frame.style.marginLeft = "300px";
         this.frame.id = "statFrame";
         this.frame.style.zIndex = 1;
         this.frame.style.position = "absolute";
-        this.frame.style.height = "100vh";
+        this.frame.style.height = "75vh";
         this.frame.style.width = "100vw";
         this.outerDiv.append(this.frame);
         this.iframeContent = document.createElement("div");
         this.iframeHeaderDiv = document.createElement("div");
+        this.iframeHeaderDiv.style.display = "flex";
+        this.iframeHeaderDiv.style.height = "25vh";
+        this.iframeHeaderDiv.style.width = "100vw";
         //this.iframeHeaderDiv.innerHTML = '<img src ="https://d2cwpp38twqe55.cloudfront.net/req/202005142/images/players/jamesle01.jpg/">';
         // this.iframeHeaderDiv.style.width = "25%";
         // this.iframeHeaderDiv.style.height = "25%";
@@ -44,18 +51,40 @@ class StatFrame {
     setFrameContent() {
         this.frame.contentDocument.body.append(this.iframeHeaderDiv);
         this.frame.contentDocument.body.append(this.iframeContent);
+        let cssFile = document.createElement("link");
+        cssFile.href = "./Stats.css";
+        cssFile.rel = "stylesheet";
+        cssFile.type = "text/css";
+        this.frame.contentDocument.head.appendChild(cssFile);
+        //this.frame.contentDocument.title = this.playerName;
     }
 
-    createHeaderDivContent() {
-        
+    createHeaderDivContent(obj) {
+        let headerDiv = document.createElement("div");
+        headerDiv.id = "pictureHeader";
+        //headerDiv.src = "https://d2cwpp38twqe55.cloudfront.net/req/202005142/images/players/jamesle01.jpg";
+        // let imgElement = document.createElement("img");
+        // imgElement.src = "https://d2cwpp38twqe55.cloudfront.net/req/202005142/images/players/jamesle01.jpg";
+        // imgElement.style.maxWidth = "200px";
+        // imgElement.style.maxHeight = "150px";
+        // headerDiv.appendChild(imgElement);
+        headerDiv.style.height = "100%";
+        headerDiv.style.width = "25%";
+        headerDiv.style.maxWidth = "200px";
+        headerDiv.style.maxHeight = "150px";
+        let playerBasicInfoDiv = document.createElement("div");
+        // playerBasicInfoDiv.style.height = "100%";
+        //playerBasicInfoDiv.style.width = "75%";
+        playerBasicInfoDiv.id = "playerBasicInfo";
+        headerDiv.innerText = "Check";
+        playerBasicInfoDiv.innerText  = "Check 2";
+        this.iframeHeaderDiv.append(headerDiv);
+        this.iframeHeaderDiv.append(playerBasicInfoDiv);
     }
 
-    // populateUI(obj) {
-    //     obj.processStatTable(obj);
-    // }
 
     processPlayerInfo(obj) {
-
+        obj.createHeaderDivContent();
     }
 
     processStatTable(obj) {
@@ -135,7 +164,7 @@ class StatFrame {
         };
         await $.post(this.url, d).done(function(data) {
             obj.data =(data);//func1(obj);
-            obj.processStatTable(obj)
+            obj.processStatTable(obj);
         });
     };
 
@@ -144,9 +173,14 @@ class StatFrame {
         let d = {
             playerName: this.playerName
         };
-        await $.post(this.requestUrl,d).done(function(data){
-            this.basicPlayerInfo = data;
-            obj.populateUI(obj);
+        await $.post(requestUrl,d).done(function(data) {
+            obj.basicPlayerInfo = data;
+            obj.processPlayerInfo(obj);
         });
     };
+
+    async renderIFrame(obj) {
+        obj.getPlayerBasicInfoFromAPI(obj);
+        obj.getPlayerStatFromAPI(obj);
+    }
 }

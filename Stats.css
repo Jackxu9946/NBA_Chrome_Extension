@@ -1,0 +1,11 @@
+#playerBasicInfo {
+    max-width: 200px;
+    max-height: 120px;
+    height: 100%;
+    width: 75%;
+}
+
+#pictureHeader {
+    max-width: 300px;
+    max-height: 120px;
+}
