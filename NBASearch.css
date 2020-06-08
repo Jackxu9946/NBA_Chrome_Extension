@@ -1,0 +1,55 @@
+#exitButton {
+    border-radius: 60%;
+    text-align: center;
+    border: none;
+    float:right;
+    color:black;
+}
+
+#statFrame {
+    max-height: 600px;
+    max-width: 800px;
+    margin-top: 200px;
+    margin-left: 300px;
+    z-index: 1;
+    position: absolute;
+    height: 75vh;
+    width: 100vw;
+}
+
+#pictureHeaderContainer {
+    display: flex;
+    height: 35vh;
+    width: 100vw;
+}
+
+#pictureHeader {
+    height: 100%;
+    width: 25%;
+    max-width: 200px;
+    max-height: 150px;
+}
+
+#playerPicture {
+    width: auto;
+    height: 100%;
+}
+
+#tableWrapperDiv {
+     overflow: scroll hidden;
+}
+
+#statTable {
+    width:100%;
+    border:1px solid black
+}
+
+th {
+    border: 1px solid black; padding: 5px;
+}
+
+td {
+    border: 1px solid black;
+    padding: 5px;
+    white-space: nowrap;
+}

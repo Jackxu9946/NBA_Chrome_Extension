@@ -65,22 +65,10 @@ function sendMessage(message) {
     chrome.tabs.query(
         {currentWindow: true, active: true},
         function (tabArray) {
-            //createNewWindow();
-            //console.log("Sending a message");
             chrome.tabs.sendMessage(tabArray[0].id, {text: message, tabId:tabArray[0].id});
         }
     );
 }
-
-
-/*
-function getCurrentlyHighlightedAndSend(){
-    var text = "";
-    if (window.getSelection()) {
-        text = window.getSelection().toString();
-        sendMessage(text);
-    }
-}*/
 
 var contextMenuItem = {
     "id": "PlayerName",

@@ -31,5 +31,8 @@
     "48": "images/get_started48.png",
     "128": "images/get_started128.png"
   },
+  "web_accessible_resources": [
+    "teamLogo.json"
+  ],
   "manifest_version": 2
 }

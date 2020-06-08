@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="NBASearch.css">
+    </head>
+    <body>
+        <div>
+            <button id="exitButton">x</button>
+        </div>
+        <div id="pictureHeaderContainer">
+            <div id="pictureHeader">
+                <img id ="playerPicture" src="https://d2cwpp38twqe55.cloudfront.net/req/202005142/images/players/jamesle01.jpg" ></div>
+            <div id="playerBasicInfo">
+            </div>
+        </div><div id="outerContainer">
+            <div id="statChoiceDiv"><ul id="statChoice" class="nav nav-tabs nav-justified">
+                <li id="totalStat" class="active"><a>Total Stats</a></li>
+                <li id="perGame"><a>Per Game</a></li>
+                <li id="postSeason"><a>Playoff</a></li>
+                <li id="postSeasonPerGame"><a>Playoff Per Game</a></li>
+                <li id="accolades"><a>Accolades</a></li>
+                </ul></div>
+            <div id="tableWrapperDiv" style="overflow: scroll hidden;">
+                <table style="width:100%; border:1px solid black" id="statTable">
+                </table>
+            </div>
+        </div>
+    </body>
+</html>
