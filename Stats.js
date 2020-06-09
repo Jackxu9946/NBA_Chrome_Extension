@@ -1,4 +1,3 @@
-
 class StatFrame {
     constructor(playerName) {
         //typeDisplayed 0 =basic
@@ -79,9 +78,9 @@ class StatFrame {
     }
 
     setFrameContent() {
-        this.frame.contentDocument.body.append(this.exitHeader);
-        this.frame.contentDocument.body.append(this.iframeHeaderDiv);
-        this.frame.contentDocument.body.append(this.iframeOuterContent);
+        //this.frame.contentDocument.body.append(this.exitHeader);
+        //this.frame.contentDocument.body.append(this.iframeHeaderDiv);
+        //this.frame.contentDocument.body.append(this.iframeOuterContent);
         let bootStrapLink = document.createElement("link");
         bootStrapLink.href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css";
         bootStrapLink.rel = "stylesheet";
@@ -89,9 +88,13 @@ class StatFrame {
         jQueryScript.src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js";
         let bootStrapJS = document.createElement("script");
         bootStrapJS.src = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js";
-        this.frame.contentDocument.head.append(bootStrapJS);
-        this.frame.contentDocument.head.append(bootStrapLink);
-        this.frame.contentDocument.head.append(jQueryScript);
+        let myCSSLink = document.createElement("link");
+        myCSSLink.href = chrome.runtime.getURL("NBASearch.css");
+        myCSSLink.rel = "stylesheet";
+        this.frame.contentDocument.head.append(myCSSLink);
+        //this.frame.contentDocument.head.append(bootStrapJS);
+        //this.frame.contentDocument.head.append(bootStrapLink);
+        //this.frame.contentDocument.head.append(jQueryScript);
     }
 
     async setTeamLogoFunction(obj) {
@@ -107,11 +110,13 @@ class StatFrame {
     }
 
     handlePerGameTab() {
-        this.getPlayerStatsPerGameFromAPI(this);
+        //this.getPlayerStatsPerGameFromAPI(this);
+        this.processStatTablePerGame(this);
     }
 
     handleTotalStatTab() {
-        this.getPlayerTotalStatFromAPI(this);
+        //this.getPlayerTotalStatFromAPI(this);
+        this.processTotalStatButton(this);
     }
 
     handlePostSeasonTab() {
@@ -123,30 +128,30 @@ class StatFrame {
         this.frame.style.display = "none";
     }
 
-    createHeaderDivContent(obj) {
-        let headerDiv = document.createElement("div");
-        obj.headerDiv = headerDiv;
-        headerDiv.id = "pictureHeader";
-        let imgElement = document.createElement("img");
-        imgElement.src = "https://d2cwpp38twqe55.cloudfront.net/req/202005142/images/players/jamesle01.jpg";
-        //imgElement.src = "https://stats.nba.com/media/img/teams/logos/BOS_logo.svg";
-        imgElement.style.width = "auto";
-        imgElement.style.height = "100%";
-        headerDiv.appendChild(imgElement);
-        headerDiv.style.height = "100%";
-        headerDiv.style.width = "25%";
-        headerDiv.style.maxWidth = "200px";
-        headerDiv.style.maxHeight = "150px";
-        let playerBasicInfoDiv = document.createElement("div");
-        obj.playerBasicInfoDiv = playerBasicInfoDiv;
-        playerBasicInfoDiv.id = "playerBasicInfo";
-        playerBasicInfoDiv.style.display = "grid";
-        playerBasicInfoDiv.style.gridTemplateRows = "repeat(3,1fr)";
-        playerBasicInfoDiv.style.gridTemplateColumns = "repeat(4,1fr)";
-        this.iframeHeaderDiv.append(headerDiv);
-        this.iframeHeaderDiv.append(playerBasicInfoDiv);
-        this.populateBasicPlayerInfo(obj);
-    }
+    // createHeaderDivContent(obj) {
+    //     // let headerDiv = document.createElement("div");
+    //     // obj.headerDiv = headerDiv;
+    //     // headerDiv.id = "pictureHeader";
+    //     // let imgElement = document.createElement("img");
+    //     // imgElement.src = "https://d2cwpp38twqe55.cloudfront.net/req/202005142/images/players/jamesle01.jpg";
+    //     // //imgElement.src = "https://stats.nba.com/media/img/teams/logos/BOS_logo.svg";
+    //     // imgElement.style.width = "auto";
+    //     // imgElement.style.height = "100%";
+    //     // headerDiv.appendChild(imgElement);
+    //     // headerDiv.style.height = "100%";
+    //     // headerDiv.style.width = "25%";
+    //     // headerDiv.style.maxWidth = "200px";
+    //     // headerDiv.style.maxHeight = "150px";
+    //     // let playerBasicInfoDiv = document.createElement("div");
+    //     // obj.playerBasicInfoDiv = playerBasicInfoDiv;
+    //     // playerBasicInfoDiv.id = "playerBasicInfo";
+    //     // playerBasicInfoDiv.style.display = "grid";
+    //     // playerBasicInfoDiv.style.gridTemplateRows = "repeat(3,1fr)";
+    //     // playerBasicInfoDiv.style.gridTemplateColumns = "repeat(4,1fr)";
+    //     // this.iframeHeaderDiv.append(headerDiv);
+    //     // this.iframeHeaderDiv.append(playerBasicInfoDiv);
+    //     this.populateBasicPlayerInfo(obj);
+    // }
 
     populateBasicPlayerInfo(obj) {
         //Basic player info is in this order
@@ -169,7 +174,8 @@ class StatFrame {
 
 
     processPlayerInfo(obj) {
-        obj.createHeaderDivContent(obj);
+        obj.populateBasicPlayerInfo(obj);
+        //obj.createHeaderDivContent(obj);
     }
 
     processStatTable(obj) {
@@ -194,8 +200,8 @@ class StatFrame {
     }
 
     processStatTablePerGame(obj) {
-        let jsonData = JSON.parse(obj.perGameData);
-        obj.perGameData = jsonData;
+        let jsonData = obj.perGameData;
+        //obj.perGameData = jsonData;
         let regularSeasonPerGameStat = jsonData.resultSets[0].rowSet;
         let newIframeContent = document.createElement("div");
         newIframeContent.id = "tableWrapperDiv";
@@ -208,15 +214,21 @@ class StatFrame {
             let selectedData = obj.selectAdvancedStat(ar);
             obj.addStatTableRow(obj, selectedData,newIframeContent);
         }
-        obj.iframeContent.remove();
-        obj.iframeContent = newIframeContent;
+        //obj.iframeContent.remove();
+        //obj.iframeContent = newIframeContent;
         obj.setTabActive(obj, 1);
-        obj.iframeOuterContent.append(obj.iframeContent);
+        //obj.iframeOuterContent.append(obj.iframeContent);
+        let iframeOuterContent = this.frame.contentDocument.getElementById("outerContainer");
+        let oldIframeTable = this.frame.contentDocument.getElementById("tableWrapperDiv");
+        oldIframeTable.remove();
+        iframeOuterContent.append(newIframeContent);
     }
 
     processTotalStatButton(obj) {
-        let jsonData = JSON.parse(obj.data);
-        obj.data = jsonData;
+        let jsonData = obj.data;
+        // console.log("TotalTabButton");
+        // console.log(jsonData);
+        //obj.data = jsonData;
         let regularSeasonPerGameStat = jsonData.resultSets[0].rowSet;
         let newIframeContent = document.createElement("div");
         newIframeContent.id = "tableWrapperDiv";
@@ -229,10 +241,14 @@ class StatFrame {
             let selectedData = obj.selectAdvancedStat(ar);
             obj.addStatTableRow(obj, selectedData,newIframeContent);
         }
-        obj.iframeContent.remove();
-        obj.iframeContent = newIframeContent;
+        //obj.iframeContent.remove();
+        //obj.iframeContent = newIframeContent;
         obj.setTabActive(obj, 0);
-        obj.iframeOuterContent.append(obj.iframeContent);
+        //obj.iframeOuterContent.append(obj.iframeContent);
+        let iframeOuterContent = this.frame.contentDocument.getElementById("outerContainer");
+        let oldIframeTable = this.frame.contentDocument.getElementById("tableWrapperDiv");
+        oldIframeTable.remove();
+        iframeOuterContent.append(newIframeContent);
     }
 
     processPostSeasonButton(obj) {
@@ -252,11 +268,14 @@ class StatFrame {
             let selectedData = obj.selectAdvancedStat(ar);
             obj.addStatTableRow(obj, selectedData,newIframeContent);
         }
-        obj.iframeContent.remove();
-        obj.iframeContent = newIframeContent;
+        //obj.iframeContent.remove();
+        //obj.iframeContent = newIframeContent;
         obj.setTabActive(obj, 2);
-        obj.iframeOuterContent.append(obj.iframeContent);
-
+        //obj.iframeOuterContent.append(obj.iframeContent);
+        let iframeOuterContent = this.frame.contentDocument.getElementById("outerContainer");
+        let oldIframeTable = this.frame.contentDocument.getElementById("tableWrapperDiv");
+        oldIframeTable.remove();
+        iframeOuterContent.append(newIframeContent);
     }
 
     setTabActive(obj,tabId) {
@@ -295,15 +314,16 @@ class StatFrame {
 
     addTableHeader(obj,ar,iframeContent) {
         let newTableRow = document.createElement("tr");
+        let foundIframeContent = this.frame.contentDocument.getElementById("tableWrapperDiv");
         for (let i =0; i < ar.length; i ++) {
             let newTableHeader = document.createElement("th");
-            newTableHeader.style.border = "1px solid black";
-            newTableHeader.style.padding = "5px";
+            // newTableHeader.style.border = "1px solid black";
+            // newTableHeader.style.padding = "5px";
             newTableHeader.innerText = " " + ar[i] + "  ";
             newTableRow.appendChild(newTableHeader);
         }
         if (iframeContent == null) {
-            obj.iframeContent.appendChild(newTableRow);
+            foundIframeContent.appendChild(newTableRow);
         } else {
             iframeContent.appendChild(newTableRow);
         }
@@ -311,17 +331,16 @@ class StatFrame {
 
     addStatTableRow(obj,ar,newIframeContent) {
         let newTableRow = document.createElement("tr");
+        let iframeContent = this.frame.contentDocument.getElementById("tableWrapperDiv");
         newTableRow.style.border = "1px solid black";
         for (let i =0; i < ar.length; i++) {
             let newTableData = document.createElement("td");
-            newTableData.style.border = "1px solid black";
-            newTableData.style.padding = "5px";
-            newTableData.style.whiteSpace = "nowrap";
             newTableData.innerText = " " + ar[i] + "  ";
             newTableRow.appendChild(newTableData);
         }
         if (newIframeContent == null) {
-            obj.iframeContent.appendChild(newTableRow);
+            //obj.iframeContent.appendChild(newTableRow);
+            iframeContent.appendChild(newTableRow);
         } else {
             newIframeContent.appendChild(newTableRow);
         }
@@ -340,28 +359,26 @@ class StatFrame {
         };
         await $.post(this.url, d).done(function(data) {
             obj.data =(data);//func1(obj);
-            //console.log(data);
             obj.processStatTable(obj);
         });
     };
 
-    async getPlayerTotalStatFromAPI(obj) {
-        let d = {
-            playerName: this.playerName
-        }
-        await $.post(this.url, d).done(function(data) {
-            obj.data =(data);//func1(obj);
-            obj.processTotalStatButton(obj);
-        });
-    };
+    //
+    // async getPlayerTotalStatFromAPI(obj) {
+    //     let d = {
+    //         playerName: this.playerName
+    //     };
+    //     await $.post(this.url, d).done(function(data) {
+    //         obj.data =(data);//func1(obj);
+    //     });
+    // };
 
     async getPlayerStatsPerGameFromAPI(obj) {
         let d = {
             playerName: this.playerName
         };
         await $.post(this.playerStatPerGameURL, d).done(function(data){
-            obj.perGameData = data;
-            obj.processStatTablePerGame(obj);
+            obj.perGameData = JSON.parse(data);
         })
     }
 
@@ -370,13 +387,20 @@ class StatFrame {
             playerName: this.playerName
         };
         await $.post(this.playerbasicInfoURL,d).done(function(data) {
-            obj.basicPlayerInfo = data;
-            obj.processPlayerInfo(obj);
+            obj.basicPlayerInfo = JSON.parse(data);
         });
     };
 
     async renderIFrame(obj) {
-        obj.getPlayerBasicInfoFromAPI(obj);
-        obj.getPlayerStatFromAPI(obj);
+        await obj.getHtmlFromServer(obj);
+    }
+
+    async getHtmlFromServer(obj) {
+        let urlToFetch = chrome.runtime.getURL("NBASearch.html");
+        await $.get(urlToFetch).done(function(data) {
+            obj.frame.contentDocument.body.innerHTML = data;
+            obj.getPlayerStatFromAPI(obj);
+            obj.getPlayerStatsPerGameFromAPI(obj);
+        }, "text");
     }
 }

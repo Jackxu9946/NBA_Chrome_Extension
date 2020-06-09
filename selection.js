@@ -1,12 +1,12 @@
 let injectedFrame;
 
-function requestHandler(request,sender,sendResponse){
-    injectedFrame = new StatFrame("Lebron James");
+async function requestHandler(request,sender,sendResponse){
+    injectedFrame = new StatFrame("Giannis Antetokounmpo");
     //injectedFrame = new StatFrame(request.text);
     let currentDoc = document.body;
     currentDoc.append(injectedFrame.outerDiv);
     injectedFrame.setFrameContent();
-    injectedFrame.renderIFrame(injectedFrame);
+    await injectedFrame.renderIFrame(injectedFrame);
     addEventListenerToTabs(injectedFrame);
 }
 
@@ -27,7 +27,7 @@ function handleExitButton() {
     injectedFrame.handleExitButton();
 }
 
-function addEventListenerToTabs(obj) {
+async function addEventListenerToTabs(obj) {
     let totalStatTab = obj.frame.contentWindow.document.getElementById("totalStat");
     let perGameTab = obj.frame.contentWindow.document.getElementById("perGame");
     let postSeasonTab = obj.frame.contentWindow.document.getElementById("postSeason");
