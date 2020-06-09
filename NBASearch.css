@@ -4,6 +4,8 @@
     border: none;
     float:right;
     color:black;
+    position:relative;
+    z-index: 10;
 }
 
 #statFrame {

@@ -11,7 +11,6 @@ async function requestHandler(request,sender,sendResponse){
 }
 
 function handlePerGameTab() {
-    console.log("This ran?");
     injectedFrame.handlePerGameTab();
 }
 
@@ -24,18 +23,20 @@ function handlePostSeasonTab() {
 }
 
 function handleExitButton() {
+    console.log("Pressed???");
     injectedFrame.handleExitButton();
 }
 
-async function addEventListenerToTabs(obj) {
+function addEventListenerToTabs(obj) {
     let totalStatTab = obj.frame.contentWindow.document.getElementById("totalStat");
     let perGameTab = obj.frame.contentWindow.document.getElementById("perGame");
     let postSeasonTab = obj.frame.contentWindow.document.getElementById("postSeason");
     let exitButton = obj.frame.contentWindow.document.getElementById("exitButton");
+    console.log(exitButton);
+    exitButton.addEventListener("click", this.handleExitButton);
     totalStatTab.addEventListener("click", this.handleTotalStatTab);
     perGameTab.addEventListener("click", this.handlePerGameTab);
     postSeasonTab.addEventListener("click", this.handlePostSeasonTab);
-    exitButton.addEventListener("click", this.handleExitButton);
 }
 
 

@@ -100,12 +100,7 @@ class StatFrame {
     async setTeamLogoFunction(obj) {
         let urlToFetch = chrome.runtime.getURL("teamLogo.json");
         await $.get(urlToFetch).done(function(data) {
-            console.log(data);
-            console.log(obj.teamLogoJsonLookup);
-            console.log(data.ATL.TeamLogoURL);
             obj.teamLogoJsonLookup = data;
-            //console.log(obj.teamLogoJsonLookup);
-            //console.log(obj.teamLogoJsonLookup);
         });
     }
 
@@ -123,8 +118,7 @@ class StatFrame {
         this.processPostSeasonButton(this);
     }
 
-    async handleExitButton() {
-        console.log(this.teamLogoJsonLookup.ATL.TeamLogoURL);
+    handleExitButton() {
         this.frame.style.display = "none";
     }
 
