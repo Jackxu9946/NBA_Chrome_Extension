@@ -86,11 +86,38 @@ class StatFrame {
         return this.iframeContent;
     }
 
-    setFramePosition(mouseX, mouseY) {
-        mouseY += 20;
-        this.frame.style.top = mouseY +'px';
-        this.frame.style.left = mouseX + 'px';
+    setFramePosition(mouseX, mouseY, left, top) {
+        // mouseY += 20;
+        // this.frame.style.top = mouseY +'px';
+        // this.frame.style.left = mouseX + 'px';
+        console.log(mouseX, mouseY);
+        if (left) {
+            this.frame.style.left = mouseX + 'px';
+            if (top) {
+                mouseY += 20;
+            } else {
+                mouseY -= 300;
+            }
+            this.frame.style.top = mouseY + 'px';
+        } else {
+            // mouseX += 30;
+            mouseX -= 100;
+            this.frame.style.left = mouseX + 'px';
+            if (top) {
+                mouseY += 20;
+            } else {
+                mouseY -= 300;
+            }
+            this.frame.style.top = mouseY + 'px';
+        }
     }
+    // setFramePosition(mouseX, mouseY,left,top) {
+    //     console.log("left is ", left);
+    //     console.log("top is ", top);
+    //     mouseY += 20;
+    //     // this.frame.style.top = mouseY + 'px';
+    //     // this.frame.style.left = mouseX + 'px';
+    // }
 
     setFrameContent() {
         let bootStrapLink = document.createElement("link");
@@ -221,7 +248,7 @@ class StatFrame {
     }
 
     processStatTable(obj) {
-        obj.hideErrorMessage(obj);
+        // obj.hideErrorMessage(obj);
         let jsonData = obj.data;
         let regularSeasonStat = jsonData['regular_season'];
         if (obj.typeDisplayed === 0) {
@@ -414,10 +441,14 @@ class StatFrame {
 
     hideErrorMessage(obj) {
         let errorContainer = this.frame.contentDocument.getElementById("errorContainer");
-        errorContainer.style.display = "none";    }
+        if (errorContainer !== null) {
+            errorContainer.style.display = "none";
+        }
+    }
     
 
     async getPlayerStatFromAPI(obj){
+        obj.hideErrorMessage(obj);
         let d = {
             playerID: obj.playerID
         };
@@ -447,10 +478,12 @@ class StatFrame {
     };
 
     async renderIFrame(obj) {
+        // obj.hideErrorMessage(obj);
         await obj.getHtmlFromServer(obj);
     }
 
     async findPlayerID(obj) {
+        // obj.hideErrorMessage(obj);
         let d = {
             playerName: obj.playerName
         };
@@ -470,6 +503,7 @@ class StatFrame {
         let urlToFetch = chrome.runtime.getURL("NBASearch.html");
         await $.get(urlToFetch).done(function(data) {
             obj.frame.contentDocument.body.innerHTML = data;
+            // obj.hideErrorMessage(obj);
             obj.findPlayerID(obj);
         }, "text");
     }

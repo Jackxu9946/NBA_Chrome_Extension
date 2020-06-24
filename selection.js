@@ -2,8 +2,13 @@ let injectedFrame = null;
 let clicked;
 let mouseX;
 let mouseY;
-let topHalf;
 let timer = 0;
+let windowHeight;
+let windowWidth;
+let clientX;
+let clientY;
+let left_frame = false;
+let top_frame = false;
 
 async function requestHandler(request,sender,sendResponse){
     if (injectedFrame !== null) {
@@ -12,11 +17,13 @@ async function requestHandler(request,sender,sendResponse){
     injectedFrame = new StatFrame(request.text);
     let currentDoc = document.body;
     currentDoc.append(injectedFrame.outerDiv);
-    injectedFrame.setFramePosition(mouseX, mouseY);
+    injectedFrame.setFramePosition(mouseX, mouseY,left_frame,top_frame);
     injectedFrame.setFrameContent();
     injectedFrame.outerDiv.style.display = "none";
+    // injectedFrame.hideErrorMessage(injectedFrame);
     await injectedFrame.renderIFrame(injectedFrame);
     addEventListenerToTabs(injectedFrame);
+    // injectedFrame.setFramePosition(mouseX, mouseY, left_frame, top_frame);
     changeDisplay();
 }
 //injectedFrame.finishedRendering value meaning
@@ -83,6 +90,45 @@ function addEventListenerToTabs(obj) {
 document.oncontextmenu = function(event) {
     mouseX = event.pageX;
     mouseY = event.pageY;
+    clientX = event.clientX;
+    clientY = event.clientY;
+    // Check if its on the left
+    console.log("Client X = ",clientX);
+    console.log("Client Y = ", clientY);
+    console.log("Window x = ", windowWidth);
+    console.log("Window Y =", windowHeight);
+    console.log("Window x /2 = ", windowWidth/2);
+    console.log("Window Y /2 =", windowHeight/2);
+    if (clientX  < windowWidth / 2 ) {
+        left_frame = true;
+    } else {
+        left_frame = false;
+    }
+    if (clientY < windowHeight / 2 ) {
+        top_frame = true;
+    } else {
+        top_frame = false;
+    }
+};
+
+window.onresize = function(event) {
+    windowWidth = window.innerWidth
+        || document.documentElement.clientWidth
+        || document.body.clientWidth;
+
+    windowHeight = window.innerHeight
+        || document.documentElement.clientHeight
+        || document.body.clientHeight;
+};
+
+window.onload = function(event) {
+    windowWidth = window.innerWidth
+        || document.documentElement.clientWidth
+        || document.body.clientWidth;
+
+    windowHeight = window.innerHeight
+        || document.documentElement.clientHeight
+        || document.body.clientHeight;
 };
 
 chrome.runtime.onMessage.addListener(requestHandler);
