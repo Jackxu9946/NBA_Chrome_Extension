@@ -1,4 +1,4 @@
-<a href="http://fvcproductions.com"><img src="https://github.com/Jackxu9946/NBA_Chrome_Extension/images/nbalogo.png" title="NBA Search"></a>
+<a href=""><img src="https://github.com/Jackxu9946/NBA_Chrome_Extension/images/logo.png" title="NBA Search"></a>
 # NBA Search Chrome Extension
 This extension allows user to search for NBA player's stats on any page.
 For example, if you are new to watching the NBA and you read an article about an up and coming player such as 
