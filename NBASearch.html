@@ -4,113 +4,115 @@
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     </head>
-    <body>
-        <div id="playerBasicInformationContainer">
-            <div id="exitButtonContainer">
-                <button id="exitButton">x</button>
+    <body id ="bodyContainer">
+        <div id="basicInformationOuter">
+            <div id="playerBasicInformationContainer" class="backgroundImage">
+                <div id="exitButtonContainer">
+                    <button id="exitButton">x</button>
+                </div>
+                <div id="playerHeadshot">
+                    <img id="playerHeadShotImg" onerror="this.src='https://www.quinceimaging.com/wp-content/uploads/2018/01/nba.com-headline-logo-grayscale.png'" >
+                </div>
+                <div id="playerInformation">
+                    <div id ="playerJerseyNumber"></div>
+                    <div id ="playerNameContainer">
+                        <div id ="playerName"></div>
+                    </div>
+                </div>
             </div>
-            <div id="playerHeadshot">
-                <img id="playerHeadShotImg" src="https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/1610612749/2019/260x190/203507.png">
-            </div>
-            <div id="playerInformation">
-                <div id ="playerJerseyNumber">#23</div>
-                <div id ="playerName">Lebron James</div>
-            </div>
-            <div id="playerSummary">
-                <div id="playerSummaryInnerDiv" >
-                        <div id="playerSummaryLeft" >
-                            <div id="playerSummaryLeftTop">
-                                <div id="playerHeight" >
-                                    <div id="playerHeightTitle">
-                                        Height
-                                    </div>
-                                    <div id="playerHeightValue">
-                                        6ft 5
-                                    </div>
-                                </div>
-                                <div id="playerWeight">
-                                    <div id="playerWeightTitle">
-                                        Weight
-                                    </div>
-                                    <div id="playerWeightValue">
-                                        150lbs
-                                    </div>
-                                </div>
-                                <div id="playerDraft">
-                                    <div id="playerDraftTitle">
-                                        Draft
-                                    </div>
-                                    <div id="playerDraftValue">
-                                        2003 1st pick
-                                    </div>
-                                </div>
+        </div>
+        <div id="playerSummary">
+            <div id="playerSummaryInnerDiv" >
+                <div id="playerSummaryLeft" >
+                    <div id="playerSummaryLeftTop">
+                        <div id="playerHeight" >
+                            <div id="playerHeightTitle">
+                                Height
                             </div>
-                            <div id="playerSummaryLeftBottom">
-                                <div id="playerAge">
-                                    <div id="playerAgeTitle">
-                                        Age
-                                    </div>
-                                    <div id="playerAgeValue">
-                                        40
-                                    </div>
-                                </div>
-                                <div id="playerExperience">
-                                    <div id="playerExperienceTitle">
-                                        Exp
-                                    </div>
-                                    <div id="playerExperienceValue">
-                                        10 yrs
-                                    </div>
-                                </div>
-                                <div id="playerBirth">
-                                    <div id="playerBirthTitle">
-                                        Born
-                                    </div>
-                                    <div id="playerBirthValue">
-                                        12/30/1984
-                                    </div>
-                                </div>
+                            <div id="playerHeightValue">
+                                6ft 5
                             </div>
                         </div>
-                        <div id="playerSummaryRight">
-                            <div id="playerTeam">
-                                <div id="playerTeamTitle">
-                                    Team
-                                </div>
-                                <div id="playerTeamValue">
-                                    Los Angeles Lakers
-                                </div>
+                        <div id="playerWeight">
+                            <div id="playerWeightTitle">
+                                Weight
                             </div>
-                            <div id="playerPTS">
-                                <div id="playerPTSTitle">
-                                    PTS
-                                </div>
-                                <div id="playerPTSValue">
-                                    25.0
-                                </div>
+                            <div id="playerWeightValue">
+                                150lbs
                             </div>
-                            <div id="playerAST">
-                                <div id="playerASTTitle">
-                                    AST
-                                </div>
-                                <div id="playerASTValue">
-                                    25.0
-                                </div>
+                        </div>
+                        <div id="playerDraft">
+                            <div id="playerDraftTitle">
+                                Draft
                             </div>
-                            <div id="playerRB">
-                                <div id="playerRBTitle">
-                                    RB
-                                </div>
-                                <div id="playerRBValue">
-                                    25.0
-                                </div>
-
+                            <div id="playerDraftValue">
+                                2003 1st pick
+                            </div>
+                        </div>
+                    </div>
+                    <div id="playerSummaryLeftBottom">
+                        <div id="playerAge">
+                            <div id="playerAgeTitle">
+                                Age
+                            </div>
+                            <div id="playerAgeValue">
+                                40
+                            </div>
+                        </div>
+                        <div id="playerExperience">
+                            <div id="playerExperienceTitle">
+                                Exp
+                            </div>
+                            <div id="playerExperienceValue">
+                                10 yrs
+                            </div>
+                        </div>
+                        <div id="playerDOB">
+                            <div id="playerDOBTitle">
+                                Born
+                            </div>
+                            <div id="playerDOBValue">
+                                12/30/1984
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+                <div id="playerSummaryRight">
+                    <div id="playerTeam">
+                        <div id="playerTeamTitle">
+                            Team
+                        </div>
+                        <div id="playerTeamValue">
+                            Los Angeles Lakers
+                        </div>
+                    </div>
+                    <div id="playerPTS">
+                        <div id="playerPTSTitle">
+                            PTS
+                        </div>
+                        <div id="playerPTSValue">
+                            25.0
+                        </div>
+                    </div>
+                    <div id="playerAST">
+                        <div id="playerASTTitle">
+                            AST
+                        </div>
+                        <div id="playerASTValue">
+                            25.0
+                        </div>
+                    </div>
+                    <div id="playerRB">
+                        <div id="playerRBTitle">
+                            RB
+                        </div>
+                        <div id="playerRBValue">
+                            25.0
+                        </div>
 
+                    </div>
+                </div>
+            </div>
         </div>
         <div id="outerContainer">
             <div id="statChoiceDiv"><ul id="statChoice" class="nav nav-tabs nav-justified">
@@ -118,9 +120,10 @@
                 <li id="perGame"><a>Per Game</a></li>
                 <li id="postSeason"><a>Playoff</a></li>
                 <li id="postSeasonPerGame"><a>Playoff Per Game</a></li>
-                <li id="accolades"><a>Accolades</a></li>
+                <!--<li id="accolades"><a>Accolades</a></li>-->
                 </ul></div>
             <div id="tableWrapperDiv" style="overflow: scroll hidden;">
+                <div id="errorContainer" style="text-align: center";></div>
                 <table style="width:100%; border:1px solid black" id="statTable">
                 </table>
         </div>

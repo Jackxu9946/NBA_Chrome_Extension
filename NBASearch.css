@@ -61,28 +61,52 @@ td {
 #playerBasicInformationContainer::after{
     content: '';
     position: absolute;
-    background: mediumpurple;
+    /*background: mediumpurple;*/
     display: flex;
-    height: 35vh;
     width: 100vw;
-    background:url("https://stats.nba.com/media/img/teams/logos/MIL_logo.svg") center center/100% no-repeat;
-    opacity: 0.2;
+    /*background:url("https://stats.nba.com/media/img/teams/logos/LAL_logo.svg") center center/100% no-repeat;*/
+    /*opacity: 0.2;*/
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     z-index: 0;
-    background-color: lightcyan;
+    /*background-color: lightcyan;*/
+    /*background-color: #032f4f;*/
 }
 
+#basicInformationOuter {
+    background-color: #032f4f;
+    color: white;
+}
+
+/*.backgroundImage::after{*/
+    /*content: '';*/
+    /*position: absolute;*/
+    /*background: mediumpurple;*/
+    /*display: flex;*/
+    /*width: 100vw;*/
+    /*background:url("https://stats.nba.com/media/img/teams/logos/MIL_logo.svg") center center/100% no-repeat;*/
+    /*opacity: 0.2;*/
+    /*top: 0;*/
+    /*bottom: 0;*/
+    /*left: 0;*/
+    /*right: 0;*/
+    /*z-index: 0;*/
+    /*background-color: lightcyan;*/
+
+/*}*/
+
 #playerHeadshot {
+    width:35%;
+    height: auto;
     z-index: 800;
     display:inline-block;
     position: relative;
 }
 
 #playerHeadShotImg {
-    max-width:100%;
+    width:100%;
     height:auto;
     display: inline-block;
     vertical-align: middle;
@@ -98,13 +122,13 @@ td {
 }
 
 #playerJerseyNumber {
-    font-size: 30px;
-    color: gray;
+    font-size: 25px;
+    /*color: black;*/
 }
 
 #playerName {
-    font-size: 30px;
-    color: gray;
+    font-size: 25px;
+    /*color: black;*/
 }
 
 #playerSummaryInnerDiv{
@@ -161,7 +185,7 @@ td {
     height: auto;
 }
 
-#playerBirth {
+#playerDOB {
     width: 40%;
     height:auto;
     border-left: 1px solid gray;
@@ -186,7 +210,8 @@ td {
 #playerTeamTitle {
     font-size: 15px;
     height: 50%;
-    width: 100%
+    width: 100%;
+    line-height: 3;
 }
 
 #playerTeamValue {
@@ -202,6 +227,18 @@ td {
     border-right: 1px solid gray;
 }
 
+#playerPTSTitle {
+    height: 50%;
+    width: 100%;
+    line-height: 3;
+}
+
+#playerPTSValue {
+    height: 50%;
+    width: 100%;
+}
+
+
 #playerAST {
     width: 20%;
     height:auto;
@@ -210,10 +247,62 @@ td {
     border-right: 1px solid gray;
 }
 
+#playerASTTitle {
+    height: 50%;
+    width: 100%;
+    line-height: 3;
+}
+
+#playerASTValue {
+    height: 50%;
+    width: 100%;
+}
+
 #playerRB {
     width: 20%;
     height:auto;
     border-top: 1px solid gray;
     border-bottom: 1px solid gray;
     border-right: 1px solid gray;
+}
+
+#playerRBTitle {
+    height: 50%;
+    width: 100%;
+    line-height: 3;
+}
+
+#playerRBValue {
+    height: 50%;
+    width: 100%;
+}
+
+
+#playerNameContainer {
+    display: inline-grid;
+}
+
+#playerPosition {
+    font-size: 25px;
+    color: gray;
+}
+
+#outerContainer {
+    width: 100%;
+    height:50%;
+}
+
+#playerSummary {
+    width: 100%;
+    background-color: #032f4f;
+    color: white;
+}
+
+#basicInformationOuter {
+    position:relative;
+    width: 100%;
+}
+
+#bodyContainer {
+    overflow-x: hidden;
 }

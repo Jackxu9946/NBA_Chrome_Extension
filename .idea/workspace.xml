@@ -2,9 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7723e308-66f4-4daf-8c16-1f50ed4bbb7c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/NBALogo.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/nbalogo.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NBASearch.css" beforeDir="false" afterPath="$PROJECT_DIR$/NBASearch.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NBASearch.html" beforeDir="false" afterPath="$PROJECT_DIR$/NBASearch.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Stats.js" beforeDir="false" afterPath="$PROJECT_DIR$/Stats.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/background.js" beforeDir="false" afterPath="$PROJECT_DIR$/background.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/selection.js" beforeDir="false" afterPath="$PROJECT_DIR$/selection.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -18,20 +24,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/manifest.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="503">
-              <caret line="36" column="20" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/NBASearch.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="18" column="22" lean-forward="true" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+            <state relative-caret-position="646">
+              <caret line="38" column="16" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -39,8 +36,77 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NBASearch.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="359">
-              <caret line="72" column="32" selection-start-line="72" selection-start-column="32" selection-end-line="72" selection-end-column="32" />
+            <state relative-caret-position="588">
+              <caret line="305" column="14" selection-start-line="305" selection-start-column="1" selection-end-line="305" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/selection.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="29" column="56" lean-forward="true" selection-start-line="29" selection-start-column="56" selection-end-line="29" selection-end-column="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/background.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="36" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Stats.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="278">
+              <caret line="444" column="45" lean-forward="true" selection-start-line="444" selection-start-column="45" selection-end-line="444" selection-end-column="45" />
+              <folding>
+                <element signature="n#style#0;n#table#0;n#body#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/popup.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="2" lean-forward="true" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/NBASearch.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="444">
+              <caret line="126" column="81" lean-forward="true" selection-start-line="126" selection-start-column="81" selection-end-line="126" selection-end-column="81" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/NBALogo.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="482">
+              <caret line="147" column="27" selection-start-line="147" selection-start-column="27" selection-end-line="147" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/teamLogo.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="6" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -58,32 +124,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>runtime</find>
-      <find>seasonStatHeader</find>
-      <find>populateUI</find>
-      <find>getPlayerBasicInfoFromAPI</find>
-      <find>pictureHeader</find>
-      <find>statTemplate</find>
-      <find>perGame</find>
-      <find>setTabActive</find>
-      <find>handlePerGameTab</find>
-      <find>postSeason</find>
-      <find>iframeOuterContent</find>
-      <find>console.log</find>
-      <find>handle</find>
-      <find>imgElement</find>
-      <find>handleTotalStatTab</find>
-      <find>tr</find>
-      <find>await $.get(urlToFetch).done(function(data) {</find>
-      <find>frame.contentDocument</find>
-      <find>tableWrapperDiv</find>
-      <find>playerBasicInfoDiv</find>
-      <find>JSON.parse</find>
-      <find>playerHeadshot</find>
-      <find>class=&quot;b&quot;</find>
-      <find>playerSummaryRight</find>
-      <find>playerTeam</find>
       <find>playerBasicInformationContainer</find>
+      <find>playerHeadshotIMG</find>
+      <find>playerbasicInformationContainer</find>
+      <find>NBASearch.css</find>
+      <find>classList</find>
+      <find>playerSummary</find>
+      <find>perGame</find>
+      <find>TotalStat</find>
+      <find>postSeasonPerGame</find>
+      <find>Position</find>
+      <find>position</find>
+      <find>Accolades</find>
+      <find>if</find>
+      <find>getPlayerStatFromAPI</find>
+      <find>logo.png</find>
+      <find>accol</find>
+      <find>per</find>
+      <find>outerdiv</find>
+      <find>this.outerDiv.style.dis</find>
+      <find>finishedRendering</find>
+      <find>obj.finishedRendering</find>
+      <find>obj.finishedRenderin</find>
+      <find>tableWrapperDiv</find>
+      <find>innerText</find>
+      <find>bodyContainer</find>
+      <find>renderErro</find>
+      <find>renderErrorMessage</find>
+      <find>storage</find>
+      <find>.style.display</find>
+      <find>activeT</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -98,15 +168,16 @@
         <option value="$PROJECT_DIR$/options.js" />
         <option value="$PROJECT_DIR$/Stats.html" />
         <option value="$PROJECT_DIR$/stats.html" />
-        <option value="$PROJECT_DIR$/background.js" />
         <option value="$PROJECT_DIR$/teamLogo.json" />
-        <option value="$PROJECT_DIR$/manifest.json" />
         <option value="$PROJECT_DIR$/Stats.css" />
         <option value="$PROJECT_DIR$/Temp" />
-        <option value="$PROJECT_DIR$/Stats.js" />
-        <option value="$PROJECT_DIR$/selection.js" />
+        <option value="$PROJECT_DIR$/NBALogo.css" />
         <option value="$PROJECT_DIR$/NBASearch.css" />
+        <option value="$PROJECT_DIR$/background.js" />
         <option value="$PROJECT_DIR$/NBASearch.html" />
+        <option value="$PROJECT_DIR$/selection.js" />
+        <option value="$PROJECT_DIR$/Stats.js" />
+        <option value="$PROJECT_DIR$/manifest.json" />
       </list>
     </option>
   </component>
@@ -118,7 +189,7 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="1905" />
-    <option name="width" value="1950" />
+    <option name="width" value="1948" />
     <option name="height" value="2075" />
   </component>
   <component name="ProjectView">
@@ -154,6 +225,7 @@
       <recent name="C:\Users\JackXu\WebstormProjects\NBA_Search\images" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\JackXu\WebstormProjects\NBA_Search\images" />
       <recent name="C:\Users\JackXu\WebstormProjects\NBA_Search" />
     </key>
   </component>
@@ -188,12 +260,20 @@
       <workItem from="1590355539307" duration="17337000" />
       <workItem from="1591211185973" duration="13000" />
       <workItem from="1591211635841" duration="16301000" />
-      <workItem from="1591650744443" duration="17106000" />
+      <workItem from="1591650744443" duration="32985000" />
+      <workItem from="1592019100458" duration="612000" />
+      <workItem from="1592076617637" duration="2603000" />
+      <workItem from="1592080038526" duration="1218000" />
+      <workItem from="1592345603606" duration="3001000" />
+      <workItem from="1592438880263" duration="1581000" />
+      <workItem from="1592573056817" duration="194000" />
+      <workItem from="1592573374871" duration="2502000" />
+      <workItem from="1592593191194" duration="30984000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96390000" />
+    <option name="totallyTimeSpent" value="154964000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -206,10 +286,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.24966975" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.12615588" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" weight="0.1980198" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
@@ -228,7 +307,7 @@
     </layout>
     <layout-to-restore>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.24966975" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.10700132" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" visible="true" weight="0.1980198" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
@@ -268,13 +347,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/popup.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="7" lean-forward="true" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/options.html">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -296,24 +368,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/background.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="70" column="1" selection-start-line="70" selection-start-column="1" selection-end-line="70" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Temp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="43" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/teamLogo.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="185" column="24" lean-forward="true" selection-start-line="185" selection-start-column="24" selection-end-line="185" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -327,23 +385,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Stats.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="23" column="36" lean-forward="true" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
-          <folding>
-            <element signature="n#style#0;n#table#0;n#body#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/selection.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="30" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Stats.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -351,24 +392,79 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/manifest.json">
+    <entry file="file://$PROJECT_DIR$/teamLogo.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="503">
-          <caret line="36" column="20" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
+        <state relative-caret-position="136">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NBALogo.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="482">
+          <caret line="147" column="27" selection-start-line="147" selection-start-column="27" selection-end-line="147" selection-end-column="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/NBASearch.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="72" column="32" selection-start-line="72" selection-start-column="32" selection-end-line="72" selection-end-column="32" />
+        <state relative-caret-position="588">
+          <caret line="305" column="14" selection-start-line="305" selection-start-column="1" selection-end-line="305" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/NBASearch.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="18" column="22" lean-forward="true" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+        <state relative-caret-position="444">
+          <caret line="126" column="81" lean-forward="true" selection-start-line="126" selection-start-column="81" selection-end-line="126" selection-end-column="81" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Stats.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="444" column="45" lean-forward="true" selection-start-line="444" selection-start-column="45" selection-end-line="444" selection-end-column="45" />
+          <folding>
+            <element signature="n#style#0;n#table#0;n#body#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/popup.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="2" lean-forward="true" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/selection.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="29" column="56" lean-forward="true" selection-start-line="29" selection-start-column="56" selection-end-line="29" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/background.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="36" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_NBA_Search.zip/NBA_Search/manifest.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="24" lean-forward="true" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manifest.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="38" column="16" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="16" />
         </state>
       </provider>
     </entry>

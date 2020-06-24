@@ -1,0 +1,150 @@
+.ATL::after {
+    opacity: 0.2;
+    background:url("https://stats.nba.com/media/img/teams/logos/ATL_logo.svg") center center/100% no-repeat;
+}
+
+.BOS::after {
+    opacity: 0.2;
+    background:url("https://stats.nba.com/media/img/teams/logos/BOS_logo.svg") center center/100% no-repeat;
+}
+
+.BKN::after {
+    opacity: 0.2;
+    background:url("https://stats.nba.com/media/img/teams/logos/BKN_logo.svg") center center/100% no-repeat;
+}
+
+.CHA::after {
+    opacity: 0.2;
+    background:url("https://stats.nba.com/media/img/teams/logos/CHA_logo.svg") center center/100% no-repeat;
+}
+
+.CHI::after {
+    opacity: 0.2;
+    background:url("https://stats.nba.com/media/img/teams/logos/CHI_logo.svg") center center/100% no-repeat;
+}
+
+.CLE::after {
+    opacity: 0.2;
+    background:url("https://stats.nba.com/media/img/teams/logos/CLE_logo.svg") center center/100% no-repeat;
+}
+
+.DAL::after {
+    opacity: 0.2;
+    background:url("https://stats.nba.com/media/img/teams/logos/DAL_logo.svg") center center/100% no-repeat;
+}
+
+.DEN::after {
+    opacity: 0.2;
+    background:url("https://stats.nba.com/media/img/teams/logos/DEN_logo.svg") center center/100% no-repeat;
+}
+
+.DET::after {
+    opacity: 0.2;
+    background:url("https://stats.nba.com/media/img/teams/logos/DET_logo.svg") center center/100% no-repeat;
+}
+
+.GSW::after {
+    opacity: 0.2;
+    background:url("https://stats.nba.com/media/img/teams/logos/GSW_logo.svg") center center/100% no-repeat;
+}
+
+.HOU::after {
+    opacity: 0.2;
+    background:url("https://stats.nba.com/media/img/teams/logos/HOU_logo.svg") center center/100% no-repeat;
+}
+
+.IND::after {
+    opacity: 0.2;
+    background:url("https://stats.nba.com/media/img/teams/logos/IND_logo.svg") center center/100% no-repeat;
+}
+
+.LAC::after {
+    opacity: 0.2;
+    background:url("https://stats.nba.com/media/img/teams/logos/LAC_logo.svg") center center/100% no-repeat;
+}
+
+.LAL::after {
+    opacity: 0.2;
+    background:url("https://stats.nba.com/media/img/teams/logos/LAL_logo.svg") center center/100% no-repeat;
+}
+
+.MEM::after {
+    opacity: 0.2;
+    background:url("https://stats.nba.com/media/img/teams/logos/MEM_logo.svg") center center/100% no-repeat;
+}
+
+.MIA::after {
+    opacity: 0.2;
+    background:url("https://stats.nba.com/media/img/teams/logos/MIA_logo.svg") center center/100% no-repeat;
+}
+
+.MIL::after {
+    opacity: 0.2;
+    background:url("https://stats.nba.com/media/img/teams/logos/MIL_logo.svg") center center/100% no-repeat;
+}
+
+.MIN::after {
+    opacity: 0.2;
+    background:url("https://stats.nba.com/media/img/teams/logos/MIN_logo.svg") center center/100% no-repeat;
+}
+
+.NOP::after {
+    opacity: 0.2;
+    background:url("https://stats.nba.com/media/img/teams/logos/NOP_logo.svg") center center/100% no-repeat;
+}
+
+.NYK::after {
+    opacity: 0.2;
+    background:url("https://stats.nba.com/media/img/teams/logos/NYK_logo.svg") center center/100% no-repeat;
+}
+
+.OKC::after {
+    opacity: 0.2;
+    background:url("https://stats.nba.com/media/img/teams/logos/OKC_logo.svg") center center/100% no-repeat;
+}
+
+.ORL::after {
+    opacity: 0.2;
+    background:url("https://stats.nba.com/media/img/teams/logos/ORL_logo.svg") center center/100% no-repeat;
+}
+
+.PHI::after {
+    opacity: 0.2;
+    background:url("https://stats.nba.com/media/img/teams/logos/PHI_logo.svg") center center/100% no-repeat;
+}
+
+.PHX::after {
+    opacity: 0.2;
+    background:url("https://stats.nba.com/media/img/teams/logos/PHX_logo.svg") center center/100% no-repeat;
+}
+
+.POR::after {
+    opacity: 0.2;
+    background:url("https://stats.nba.com/media/img/teams/logos/POR_logo.svg") center center/100% no-repeat;
+}
+
+.SAC::after {
+    opacity: 0.2;
+    background:url("https://stats.nba.com/media/img/teams/logos/SAC_logo.svg") center center/100% no-repeat;
+}
+
+.SAS::after {
+    opacity: 0.2;
+    background:url("https://stats.nba.com/media/img/teams/logos/SAS_logo.svg") center center/100% no-repeat;
+}
+
+.TOR::after {
+    opacity: 0.2;
+    background:url("https://stats.nba.com/media/img/teams/logos/TOR_logo.svg") center center/100% no-repeat;
+}
+
+.UTA::after {
+    opacity: 0.2;
+    background:url("https://stats.nba.com/media/img/teams/logos/UTA_logo.svg") center center/100% no-repeat;
+}
+
+.WAS::after {
+    opacity: 0.2;
+    background-color: gray;
+    background:url("https://stats.nba.com/media/img/teams/logos/WAS_logo.svg") center center/100% no-repeat;
+}
