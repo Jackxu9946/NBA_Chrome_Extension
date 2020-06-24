@@ -22,13 +22,10 @@ class StatFrame {
         this.outerDiv.style.position = "absolute";
         this.outerDiv.style.zIndex = 9999;
         this.outerDiv.style.top = "0px";
-        // this.outerDiv.style.display = "hidden";
         this.playerName = playerName;
         this.frame = document.createElement("iframe");
         this.frame.style.maxHeight = "300px";
         this.frame.style.maxWidth = "800px";
-        // this.frame.style.marginTop = "200px";
-        // this.frame.style.marginLeft = "300px";
         this.frame.style.minWidth = "400px";
         this.frame.id = "statFrame";
         this.frame.style.zIndex = 1;
@@ -121,12 +118,10 @@ class StatFrame {
     }
 
     handlePerGameTab() {
-        //this.getPlayerStatsPerGameFromAPI(this);
         this.processStatTablePerGame(this);
     }
 
     handleTotalStatTab() {
-        //this.getPlayerTotalStatFromAPI(this);
         this.processTotalStatButton(this);
     }
 
@@ -261,8 +256,6 @@ class StatFrame {
     }
 
     processStatTablePerGame(obj) {
-        // let jsonData = obj.perGameData;
-        // let regularSeasonPerGameStat = jsonData.resultSets[0].rowSet;
         let regularSeasonPerGameStat = obj.data['regular_season_per_game'];
         let newIframeContent = document.createElement("div");
         newIframeContent.id = "tableWrapperDiv";
@@ -272,7 +265,6 @@ class StatFrame {
         obj.addAdvancedStatHeader(obj, newIframeContent);
         for (let i = regularSeasonPerGameStat.length-1; i >= 0; i --) {
             let ar = regularSeasonPerGameStat[i];
-            // let selectedData = obj.selectAdvancedStat(ar);
             let selectedData = ar;
             obj.addStatTableRow(obj, selectedData,newIframeContent);
         }
@@ -284,8 +276,6 @@ class StatFrame {
     }
 
     processTotalStatButton(obj) {
-        // let jsonData = obj.data;
-        // let regularSeasonPerGameStat = jsonData.resultSets[0].rowSet;
         let regularSeasonPerGameStat = obj.data['regular_season'];
         let newIframeContent = document.createElement("div");
         newIframeContent.id = "tableWrapperDiv";
@@ -295,7 +285,6 @@ class StatFrame {
         obj.addAdvancedStatHeader(obj, newIframeContent);
         for (let i = regularSeasonPerGameStat.length-1; i >= 0; i --) {
             let ar = regularSeasonPerGameStat[i];
-            // let selectedData = obj.selectAdvancedStat(ar);
             let selectedData = ar;
             obj.addStatTableRow(obj, selectedData,newIframeContent);
         }
@@ -307,8 +296,6 @@ class StatFrame {
     }
 
     processPostSeasonButton(obj) {
-        // let jsonData = obj.data;
-        // let regularSeasonPerGameStat = jsonData.resultSets[2].rowSet;
         let regularSeasonPerGameStat = obj.data['post_season'];
         let newIframeContent = document.createElement("div");
         newIframeContent.id = "tableWrapperDiv";
@@ -318,7 +305,6 @@ class StatFrame {
         obj.addAdvancedStatHeader(obj, newIframeContent);
         for (let i = regularSeasonPerGameStat.length-1; i >= 0; i --) {
             let ar = regularSeasonPerGameStat[i];
-            // let selectedData = obj.selectAdvancedStat(ar);
             let selectedData = ar;
             obj.addStatTableRow(obj, selectedData,newIframeContent);
         }
@@ -427,7 +413,6 @@ class StatFrame {
     }
 
     hideErrorMessage(obj) {
-        // let errorContainer = obj.frame.contentDocument.getElementById("errorContainer");
         let errorContainer = this.frame.contentDocument.getElementById("errorContainer");
         errorContainer.style.display = "none";    }
     
@@ -443,9 +428,6 @@ class StatFrame {
     };
 
     async getPlayerStatsPerGameFromAPI(obj) {
-        // let d = {
-        //     playerName: this.playerName
-        // };
         let d = {
             playerID: obj.playerID
         };
@@ -488,7 +470,6 @@ class StatFrame {
         let urlToFetch = chrome.runtime.getURL("NBASearch.html");
         await $.get(urlToFetch).done(function(data) {
             obj.frame.contentDocument.body.innerHTML = data;
-            // obj.hideErrorMessage(obj);
             obj.findPlayerID(obj);
         }, "text");
     }
