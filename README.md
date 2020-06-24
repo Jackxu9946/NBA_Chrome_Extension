@@ -21,3 +21,14 @@ Donovan Mitchell. You can simply highlight the player's name on the article and 
 3. Click on the option and the result should be displayed on the same page.
 
 [![Image from Gyazo](https://i.gyazo.com/9a40c90794cd63885c44c51b16ca76b6.gif)](https://gyazo.com/9a40c90794cd63885c44c51b16ca76b6)
+
+## TroubleShooting
+1. If you search a player that does not exist. The extension will return an error and ask you to refresh.
+2. If you search only a player's first name, the extension will show a player that closely resembles that player.
+For example, if you just search Michael, you would expect the extension to return Michael Jordan but it might returns 
+Michael Finley. For accurate result, search the entire name
+3. If the extension times out, it will return an error.
+
+## P.S
+This is a side project and the back-end is hosted on Azure with a free subscription. This application will slow down
+when encountering too many requests.
