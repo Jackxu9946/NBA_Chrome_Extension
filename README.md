@@ -20,4 +20,4 @@ Donovan Mitchell. You can simply highlight the player's name on the article and 
 2. Right click and you should see an option to search with NBASearch
 3. Click on the option and the result should be displayed on the same page.
 
-![SampleGif](https://gyazo.com/9a40c90794cd63885c44c51b16ca76b6)
+[![Image from Gyazo](https://i.gyazo.com/9a40c90794cd63885c44c51b16ca76b6.gif)](https://gyazo.com/9a40c90794cd63885c44c51b16ca76b6)
